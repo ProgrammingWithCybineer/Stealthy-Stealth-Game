@@ -49,7 +49,7 @@ init python:
     #################################################
 
     DEFAULT_GUARD_SPEED = 3
-    guard.speed = DEFAULT_GUARD_SPEED
+    #guard.speed = DEFAULT_GUARD_SPEED
 
     DEFAULT_VISION_RANGE = 200
     ELITE_VISION_RANGE = 300

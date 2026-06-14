@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/ui/hud.rpy", line 1: expected statement.
+    from python import len
+                          ^
+
+Ren'Py Version: Ren'Py 8.3.2.24090902
+Sun Jun 14 12:45:28 2026

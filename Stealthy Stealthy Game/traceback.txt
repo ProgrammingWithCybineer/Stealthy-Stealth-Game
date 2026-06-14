@@ -1,26 +1,79 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/enemies/boss.rpy", line 3, in script
-    init python:
-  File "game/enemies/boss.rpy", line 5, in <module>
-    class BossGuard(Guard):
-NameError: name 'Guard' is not defined
+  File "game/levels/level01.rpy", line 20, in script
+    pause 0.1
+  File "renpy/common/000statements.rpy", line 460, in execute_pause
+    renpy.pause(delay)
+  File "game/ui/hud.rpy", line 2, in execute
+    screen hud():
+  File "game/ui/hud.rpy", line 2, in execute
+    screen hud():
+  File "game/ui/hud.rpy", line 4, in execute
+    frame:
+NameError: Name 'len' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/enemies/boss.rpy", line 3, in script
-    init python:
-  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/enemies/boss.rpy", line 5, in <module>
-    class BossGuard(Guard):
-NameError: name 'Guard' is not defined
+  File "game/levels/level01.rpy", line 20, in script
+    pause 0.1
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\ast.py", line 1974, in execute
+    self.call("execute")
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\ast.py", line 1953, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\statements.py", line 374, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 460, in execute_pause
+    renpy.pause(delay)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\exports\statementexports.py", line 194, in pause
+    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward, pause=delay, pause_modal=modal)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\ui.py", line 301, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\display\core.py", line 2215, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\display\displayable.py", line 434, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\display\screen.py", line 480, in visit_all
+    callback(self)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\display\core.py", line 2745, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\display\screen.py", line 491, in per_interact
+    self.update()
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\display\screen.py", line 697, in update
+    self.screen.function(**self.scope)
+  File "game/ui/hud.rpy", line 2, in execute
+    screen hud():
+  File "game/ui/hud.rpy", line 2, in execute
+    screen hud():
+  File "game/ui/hud.rpy", line 4, in execute
+    frame:
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\text\text.py", line 2093, in _scope
+    return self.set_text(self.text_parameter, scope, self.substitute, update)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\text\text.py", line 2132, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute) # type: ignore
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\substitutions.py", line 373, in substitute
+    s = interpolate(s, variables) # type: ignore
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\substitutions.py", line 86, in interpolate
+    raise e
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\substitutions.py", line 78, in interpolate
+    value = renpy.python.py_eval(code, {}, scope)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\python.py", line 1209, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\python.py", line 1202, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "<none>", line 1, in <module>
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\substitutions.py", line 313, in __getitem__
+    raise NameError("Name '{}' is not defined.".format(key))
+NameError: Name 'len' is not defined.
 
 Windows-10-10.0.26200 AMD64
 Ren'Py 8.3.2.24090902
 Stealthy Stealthy Game 1.0
-Sun Jun 14 12:23:17 2026
+Sun Jun 14 12:50:13 2026

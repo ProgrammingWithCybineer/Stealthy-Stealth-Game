@@ -2,7 +2,7 @@
 
 init python:
 
-    class BossGuard(Guard):
+    class BossGuard():
 
         def __init__(self, x, y):
 

@@ -2,7 +2,7 @@
 
 init python:
 
-    class EliteGuard(Guard):
+    class EliteGuard():
 
         def __init__(self, x, y):
 
