@@ -6,10 +6,17 @@ init python:
         def __init__(self):
             self.x = 100
             self.y = 100
+
             self.hidden = False
+            self.crouched = False
+
+            self.disguise = None
+            self.nightvision = False
+
             self.inventory = []
 
         def move(self, dx, dy):
+
             self.x += dx
             self.y += dy
 
@@ -20,3 +27,5 @@ init python:
             self.hidden = False
 
     player = Player()
+
+    

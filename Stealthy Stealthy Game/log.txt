@@ -1,31 +1,42 @@
-2026-06-11 15:40:46 UTC
+2026-06-14 18:23:16 UTC
 Windows-10-10.0.26200
 Ren'Py 8.3.2.24090902
 
-Early init took 0.10s
+Early init took 0.13s
 Loading error handling took 0.04s
-Loading script took 0.17s
-Loading save slot metadata took 0.02s
+Loading script took 0.30s
+Loading save slot metadata took 0.03s
 Loading persistent took 0.00s
-Running init code took 0.06s
-Loading analysis data took 0.01s
-Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.02s
-Index archives took 0.00s
-Dump and make backups took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc took 0.04s
+
+Full traceback:
+  File "game/enemies/boss.rpy", line 3, in script
+    init python:
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Cybineer\Desktop\Programming Software\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/enemies/boss.rpy", line 5, in <module>
+    class BossGuard(Guard):
+NameError: name 'Guard' is not defined
+
+While running game code:
+  File "game/enemies/boss.rpy", line 3, in script
+    init python:
+  File "game/enemies/boss.rpy", line 5, in <module>
+    class BossGuard(Guard):
+NameError: name 'Guard' is not defined
 DPI scale factor: 1.250000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.01s
-Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.00s
-Load screen analysis took 0.02s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Interface start took 0.28s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 5500'
+Version: b'4.6.0 Compatibility Profile Context 24.20.19.07.250826'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096

@@ -8,7 +8,7 @@
 
         "Start Game":
 
-            jump level1
+            jump level01
 
         "Quit":
 
