@@ -14,7 +14,7 @@ screen stealth_game():
     key "K_DOWN" action Function(player.move,0,10)
     key "K_LEFT" action Function(player.move,-10,0)
     key "K_RIGHT" action Function(player.move,10,0)
-
+    key "K_ESCAPE" action Show("pause_menu")
     timer 0.25 repeat True action Function(check_hiding)
 
 
